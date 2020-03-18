@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="dataTrackerViewModel"
+            type="com.mobprodasar.nim6706180044.dataTracker.DataTrackerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".dataTracker.DataTrackerFragment">
+
+        <Button
+            android:id="@+id/btTambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/bt_tambah"
+            android:text="@string/tambah"
+            android:textColor="@color/putih"
+            android:textSize="@android:dimen/app_icon_size"
+            android:onClick="@{() -> DataTrackerViewModel.onStartTracking()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
